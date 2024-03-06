@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -11,13 +12,12 @@ using static System.Net.WebRequestMethods;
 public class OptionsScript : MonoBehaviour
 {
     string urlListRoom = "http://127.0.0.1:8000/listroom";
-    string urlMachineryInRoom = "http://127.0.0.1:8000/machineryRoom?id=";
 
     public TMP_Dropdown dropdownRooms;
     public TMP_Dropdown dropdownMachinery;
 
     List<ResponseListRoom> listRooms = null;
-    List<ResponseMachineryRoom> listMachinery = null;
+    List<ResponseMachinery> listMachinery = null;
 
 
 
@@ -61,21 +61,20 @@ public class OptionsScript : MonoBehaviour
 
     private void ChangeMachinery(int arg0)
     {
-        dropdownMachinery.options.Clear();
+
         foreach (var room in listRooms)
         {
             if(room.roomName == dropdownRooms.options[arg0].text) StartCoroutine(getMachinery_Coroutine(room.roomId));
             
         }
-        dropdownMachinery.value = 0;
-        dropdownMachinery.onValueChanged.AddListener(goToMachineryScene);
+        
     }
 
 
 
     IEnumerator getMachinery_Coroutine(string room)
     {
-        string urlToCall = "http://127.0.0.1:8000/machineryRoom?id=" + room;
+        string urlToCall = "http://127.0.0.1:8000/machineryByRoom?id=" + room;
         using (UnityWebRequest request = UnityWebRequest.Get(urlToCall))
         {
 
@@ -87,7 +86,7 @@ public class OptionsScript : MonoBehaviour
             else
             {
                 string json = request.downloadHandler.text;
-                listMachinery = JsonConvert.DeserializeObject<List<ResponseMachineryRoom>>(json);
+                listMachinery = JsonConvert.DeserializeObject<List<ResponseMachinery>>(json);
 
             }
         }
@@ -95,12 +94,13 @@ public class OptionsScript : MonoBehaviour
         if (listMachinery != null)
         {
             dropdownMachinery.options.Clear();
-            dropdownMachinery.value = 0;
-            foreach (ResponseMachineryRoom machinery in listMachinery)
+            dropdownMachinery.options.Add(new TMP_Dropdown.OptionData("Select Machinery"));
+            foreach (ResponseMachinery machinery in listMachinery)
             {
-                dropdownMachinery.options.Add(new TMP_Dropdown.OptionData(machinery.name));
-                Debug.Log(machinery.name);  
+                dropdownMachinery.options.Add(new TMP_Dropdown.OptionData(machinery.internal_id.ToString()));
             }
+            dropdownMachinery.value = 0;
+            dropdownMachinery.onValueChanged.AddListener(goToMachineryScene);
 
         }
     }
@@ -108,11 +108,28 @@ public class OptionsScript : MonoBehaviour
 
     private void goToMachineryScene(int arg0)
     {
-        switch (arg0)
+       int _internalId = listMachinery[arg0 - 1].internal_id;
+        Debug.Log(_internalId);
+
+
+        switch (_internalId)
         {
-            case 0: break;
-            
-            default: break;
+            case 1:
+                SceneManager.LoadScene("GarbasperoniScene");
+
+                    break;
+            case 2:
+                Debug.Log(_internalId);
+                SceneManager.LoadScene("ApplicapuntaliScene"); 
+                break;
+            case 3:
+                Debug.Log(_internalId);
+                SceneManager.LoadScene("GarbapunteScene");
+                break;
+                    
+
+            default: Debug.Log(_internalId);
+                break;
         }
     }
 }

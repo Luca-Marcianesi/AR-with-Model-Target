@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/StartScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ApplicapuntaliScene.unity
+    guid: c4afcae751091c6408d10195b0e49a03
+  - enabled: 1
+    path: Assets/Scenes/GarbapunteScene.unity
+    guid: 4c93fd61d20a3644bb22f0f7cf18b338
+  - enabled: 1
+    path: Assets/Scenes/GarbasperoniScene.unity
+    guid: 02e3bf3bda409d248bfb8e60e438b092
   m_configObjects: {}
