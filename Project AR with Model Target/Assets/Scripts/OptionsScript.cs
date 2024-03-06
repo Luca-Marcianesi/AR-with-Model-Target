@@ -109,7 +109,6 @@ public class OptionsScript : MonoBehaviour
     private void goToMachineryScene(int arg0)
     {
        int _internalId = listMachinery[arg0 - 1].internal_id;
-        Debug.Log(_internalId);
 
 
         switch (_internalId)
@@ -119,11 +118,11 @@ public class OptionsScript : MonoBehaviour
 
                     break;
             case 2:
-                Debug.Log(_internalId);
+               
                 SceneManager.LoadScene("ApplicapuntaliScene"); 
                 break;
             case 3:
-                Debug.Log(_internalId);
+                
                 SceneManager.LoadScene("GarbapunteScene");
                 break;
                     
