@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="27.0" toolVersion="10.20.3">
+<ModelTarget name="StiraTalloni" targetId="3d5ec518594b49e39332d6b74a522681" version="14.0" toolVersion="10.20.3" bbox="-0.675439 -0.345083 -0.796714 0.643339 0.412487 0.354829" previewImage="3d5ec518594b49e39332d6b74a522681_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="StiraTallonis_assembly" assemblyId="632992054c094416a2ca838dc4243d68">
+<Part name="StiraTalloni" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="orizzontale" translation="-0.0240086 0.0971081 1.99651" rotation="AD: -1 -0.00226913 0.0022615 89.8073" image="StiraTalloni_orizzontale.png" trained="no">
+
+</EntryPoint>
+<EntryPoint name="verticale" translation="-0.0240086 0.0971081 2.12106" rotation="AD: -1 -0.00226913 0.0022615 89.8073" image="StiraTalloni_verticale.png" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>

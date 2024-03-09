@@ -97,7 +97,7 @@ public class OptionsScript : MonoBehaviour
             dropdownMachinery.options.Add(new TMP_Dropdown.OptionData("Select Machinery"));
             foreach (ResponseMachinery machinery in listMachinery)
             {
-                dropdownMachinery.options.Add(new TMP_Dropdown.OptionData(machinery.internal_id.ToString()));
+                dropdownMachinery.options.Add(new TMP_Dropdown.OptionData(machinery.name));
             }
             dropdownMachinery.value = 0;
             dropdownMachinery.onValueChanged.AddListener(goToMachineryScene);

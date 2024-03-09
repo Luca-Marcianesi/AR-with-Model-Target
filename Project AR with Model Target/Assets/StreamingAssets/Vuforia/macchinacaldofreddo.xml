@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="macchinacaldofreddo" motionHint="adaptive" trackingMode="scan" optimizeTrackingFor="default"/>
+
+</Tracking>
+
+<Assembly name="macchinacaldofreddos_assembly" assemblyId="6146ad5218484ee3a219ce736ce646dd">
+<Part name="macchinacaldofreddo" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="orizzontale" translation="0.142818 0.00832997 3.60803" rotation="AD: -1 -0.00179359 0.0018441 91.5913" trained="no">
+
+</EntryPoint>
+<EntryPoint name="verticale" translation="0.196575 0.154063 2.38505" rotation="AD: -1 0.0127594 -0.014137 95.8742" trained="no">
+
+</EntryPoint>
+<EntryPoint name="nuova" translation="0.163085 0.0899329 3.8631" rotation="AD: -1 0.000466776 -0.000454632 88.4897" trained="no">
+
+</EntryPoint>
+<EntryPoint name="lontano" translation="0.163085 0.0899325 6.38994" rotation="AD: -1 0.000466776 -0.000454632 88.4897" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>

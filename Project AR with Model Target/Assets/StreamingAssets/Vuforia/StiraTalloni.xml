@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="StiraTalloni" motionHint="adaptive" trackingMode="scan" optimizeTrackingFor="default"/>
+
+</Tracking>
+
+<Assembly name="StiraTallonis_assembly" assemblyId="632992054c094416a2ca838dc4243d68">
+<Part name="StiraTalloni" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="orizzontale" translation="-0.0240086 0.0971081 1.99651" rotation="AD: -1 -0.00226913 0.0022615 89.8073" trained="no">
+
+</EntryPoint>
+<EntryPoint name="verticale" translation="-0.0240086 0.0971081 2.12106" rotation="AD: -1 -0.00226913 0.0022615 89.8073" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>
