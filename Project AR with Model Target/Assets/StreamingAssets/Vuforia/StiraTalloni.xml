@@ -13,6 +13,15 @@
 <EntryPoint name="verticale" translation="-0.0240086 0.0971081 2.12106" rotation="AD: -1 -0.00226913 0.0022615 89.8073" trained="no">
 
 </EntryPoint>
+<EntryPoint name="lontano2" translation="-1.38243e-10 -1.8929e-07 3.18793" rotation="AD: -1 -0.000355792 0.000366298 91.6671" trained="no">
+
+</EntryPoint>
+<EntryPoint name="lontano3" translation="-1.74623e-10 -2.42092e-07 4.04758" rotation="AD: -1 -0.000355792 0.000366298 91.6671" trained="no">
+
+</EntryPoint>
+<EntryPoint name="lontano4" translation="-2.11003e-10 -2.69976e-07 4.62221" rotation="AD: -1 -0.000355792 0.000366298 91.6671" trained="no">
+
+</EntryPoint>
 
 </Assembly>
 

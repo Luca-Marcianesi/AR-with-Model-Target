@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="ApplicaPuntale" motionHint="adaptive" trackingMode="scan" optimizeTrackingFor="default"/>
+
+</Tracking>
+
+<Assembly name="ApplicaPuntales_assembly" assemblyId="9484b6713c48436db85601edf7049881">
+<Part name="ApplicaPuntale" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="GuideView_0000" translation="0.0652813 -0.0378401 3.52577" rotation="AD: 0.539914 -0.843008 18.0953 180.159" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0001" translation="0.0825703 -0.0455854 2.91177" rotation="AD: -0.219771 -0.97605 31.2763 179.975" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>
