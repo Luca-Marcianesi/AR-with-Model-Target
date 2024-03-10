@@ -14,7 +14,10 @@ public class StateController : MonoBehaviour
 
     bool _localState = false;
 
-    string urlsetState = "http://localhost:8000/changeState?id=";
+    //string urlsetState = "http://193.205.129.120:63395/changeState?id=";
+    
+    string urlsetState = "http://127.0.0.1:8000/changeState?id=";
+
 
     private void Start()
     {

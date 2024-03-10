@@ -11,6 +11,7 @@ using static System.Net.WebRequestMethods;
 
 public class OptionsScript : MonoBehaviour
 {
+    //string urlListRoom = "http://193.205.129.120:63395/listroom";
     string urlListRoom = "http://127.0.0.1:8000/listroom";
 
     public TMP_Dropdown dropdownRooms;
@@ -75,6 +76,7 @@ public class OptionsScript : MonoBehaviour
     IEnumerator getMachinery_Coroutine(string room)
     {
         string urlToCall = "http://127.0.0.1:8000/machineryByRoom?id=" + room;
+        // sting urlToCall = "http://193.205.129.120:63395/machineryByRoom?id=" + room;
         using (UnityWebRequest request = UnityWebRequest.Get(urlToCall))
         {
 

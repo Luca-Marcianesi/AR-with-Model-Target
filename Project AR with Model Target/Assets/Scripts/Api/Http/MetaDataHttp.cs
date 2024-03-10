@@ -13,7 +13,8 @@ public class HttpMetaData : MonoBehaviour
 
     public int internalId;
 
-    string urlsetState = "http://localhost:8000/machinery?id=";
+    //string urlsetState = "http://193.205.129.120:63395/machinery?id=";
+    string urlsetState = "http://127.0.0.1:8000/machinery?id=";
 
     List<ResponseMachinery> list = null;
 
