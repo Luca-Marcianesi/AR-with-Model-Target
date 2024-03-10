@@ -32,7 +32,10 @@ public class WebSocketManager : MonoBehaviour
     {
         if (newdata != null)
         {
-            textToViewModel.text = newdata.temperature + " °C";
+            if(textToViewModel != null)
+            {
+                textToViewModel.text = newdata.temperature + " °C";
+            }
             textToViewUi.text = newdata.temperature + " °C";
 
 
