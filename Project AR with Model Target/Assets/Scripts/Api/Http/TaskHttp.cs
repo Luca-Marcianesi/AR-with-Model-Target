@@ -9,13 +9,14 @@ public class TakHttp : MonoBehaviour
 {
     public TMP_Text textTask;
 
-
+    //internal id of the current model selected
     public int internalId;
 
-    string urlsetState = "http://localhost:8000/getTaskById?id=";
-    // string urlsetState = "http://193.205.129.120:63395/getTaskById?id=";
+    //string _urlsetState = "http://localhost:8000/getTaskById?id=";
+    string _urlsetState = "http://193.205.129.120:63395/getTaskById?id=";
 
-    List<ResponseTask> list = null;
+    //list to memorize the result of the api call
+    List<ResponseTask> _list = null;
 
 
     // Start is called before the first frame update
@@ -24,9 +25,11 @@ public class TakHttp : MonoBehaviour
         StartCoroutine(getMetaData());
     }
 
+
+    //method that start the api connection and strore the result
     IEnumerator getMetaData()
     {
-        using (UnityWebRequest request = UnityWebRequest.Get(urlsetState + internalId))
+        using (UnityWebRequest request = UnityWebRequest.Get(_urlsetState + internalId))
         {
 
             yield return request.SendWebRequest();
@@ -37,14 +40,16 @@ public class TakHttp : MonoBehaviour
             else
             {
                 string json = request.downloadHandler.text;
-                list = JsonConvert.DeserializeObject<List<ResponseTask>>(json);
+                //use jsonconverter because the result is not an object but a list
+                _list = JsonConvert.DeserializeObject<List<ResponseTask>>(json);
 
             }
-            if (list != null)
+            if (_list != null)
             {
-                foreach (ResponseTask task in list)
+                //insert all the task content in the ui element
+                foreach (ResponseTask task in _list)
                 {
-                    if(textTask != null) textTask.text += task.content + "\n";
+                    if(textTask != null) textTask.text += task.content + "\n\n";
                     
                 }
 

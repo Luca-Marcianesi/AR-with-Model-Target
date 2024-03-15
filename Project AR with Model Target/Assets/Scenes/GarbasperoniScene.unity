@@ -435,7 +435,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -935,7 +935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &189024242
 Transform:
   m_ObjectHideFlags: 0
@@ -1255,7 +1255,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1970665960}
   - {fileID: 411320650}
   - {fileID: 1085743568}
   - {fileID: 62893061}
@@ -1770,7 +1769,7 @@ GameObject:
   - component: {fileID: 511946208}
   - component: {fileID: 511946207}
   m_Layer: 0
-  m_Name: PlaneTextWanigRight
+  m_Name: PlaneTextState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1997,7 +1996,7 @@ GameObject:
   - component: {fileID: 755156195}
   - component: {fileID: 755156194}
   m_Layer: 0
-  m_Name: TextWarning
+  m_Name: TextWarningL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2315,7 +2314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Task
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2348,7 +2347,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 40
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2835,7 +2834,7 @@ GameObject:
   - component: {fileID: 1194323627}
   - component: {fileID: 1194323626}
   m_Layer: 0
-  m_Name: PlaneTextWanig
+  m_Name: PlaneTextWanigR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3211,7 +3210,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380908792}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -0.031}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3219,7 +3218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.063, y: -0}
+  m_AnchoredPosition: {x: 0.06, y: 0.14}
   m_SizeDelta: {x: 9.642, y: 9.536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1380908794
@@ -3242,7 +3241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: be careful high temperatures
+  m_text: temperature selector
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3275,7 +3274,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3373,7 +3372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1397788524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3551,7 +3550,7 @@ GameObject:
   - component: {fileID: 1531379155}
   - component: {fileID: 1531379154}
   m_Layer: 0
-  m_Name: TextEmergRight
+  m_Name: TextState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3843,7 +3842,7 @@ GameObject:
   - component: {fileID: 1647539499}
   - component: {fileID: 1647539498}
   m_Layer: 0
-  m_Name: TextWarning
+  m_Name: TextWarningR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4188,7 +4187,7 @@ GameObject:
   - component: {fileID: 1684168623}
   - component: {fileID: 1684168622}
   m_Layer: 0
-  m_Name: PlaneTextWanigRight
+  m_Name: PlaneTextEmergRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4687,7 +4686,7 @@ Transform:
   m_GameObject: {fileID: 1940908229}
   serializedVersion: 2
   m_LocalRotation: {x: -0.59569496, y: 0.0017790411, z: -0.0013194192, w: 0.8032077}
-  m_LocalPosition: {x: 0.0168, y: 0.3774, z: -0.0885}
+  m_LocalPosition: {x: 0.0168, y: 0.3872, z: -0.0959}
   m_LocalScale: {x: 0.0123292785, y: 0.02, z: 0.015246858}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4863,16 +4862,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970665955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.609375, y: 0.609375, z: 0.609375}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 347321512}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 959.99994, y: 2077.5383}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970665961
@@ -4902,7 +4901,7 @@ GameObject:
   - component: {fileID: 1976355190}
   - component: {fileID: 1976355189}
   m_Layer: 0
-  m_Name: PlaneTextWanigLeft
+  m_Name: PlaneTextEmergLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5157,7 +5156,7 @@ GameObject:
   - component: {fileID: 2061216689}
   - component: {fileID: 2061216688}
   m_Layer: 0
-  m_Name: PlaneTextWanig
+  m_Name: PlaneTextWanigL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5352,7 +5351,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -55.86212, z: 0, w: -69.26904}
+  m_margin: {x: 32.635498, y: -17.786804, z: 32.636414, w: -69.26904}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5382,8 +5381,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.3687, y: 14.2116}
-  m_SizeDelta: {x: 967.4069, y: 1186.8994}
+  m_AnchoredPosition: {x: 24.785, y: 148.7099}
+  m_SizeDelta: {x: 922.5743, y: 1455.896}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -5392,5 +5391,6 @@ SceneRoots:
   - {fileID: 413959985}
   - {fileID: 340361490}
   - {fileID: 23010121}
+  - {fileID: 1970665960}
   - {fileID: 2027190732}
   - {fileID: 370015053}

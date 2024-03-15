@@ -6,23 +6,32 @@ using WebSocketSharp;
 
 public class WebSocketManager : MonoBehaviour
 {
-    WebSocket ws = new WebSocket("ws://193.205.129.120:63425");
-    [SerializeField] private TMP_Text textToViewModel;
-    [SerializeField] private TMP_Text textToViewUi;
-    [SerializeField] private TMP_Text textButton;
-    ResponseWebSocket newdata = null;
+
+    //create the object for the web socket connection
+    WebSocket _ws = new WebSocket("ws://193.205.129.120:63425");
+
+    //the Ui object that display the changes
+    public TMP_Text textToViewModel;
+    public TMP_Text textToViewUi;
+    public TMP_Text textButton;
+
+    //empy object for the response of the connection
+    ResponseWebSocket _newdata = null;
+
+    //varieble the save locally the state of the connection
+    bool _isConnected = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-       
 
 
-        ws.OnMessage += (sender, e) =>
+
+        //attach a listener to the web socket
+        _ws.OnMessage += (sender, e) =>
         {
-            
-            newdata =  JsonUtility.FromJson<ResponseWebSocket>(e.Data);
+            //on new message save the new data (after a json parser)
+            _newdata =  JsonUtility.FromJson<ResponseWebSocket>(e.Data);
         };
 
     }
@@ -30,13 +39,14 @@ public class WebSocketManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (newdata != null)
+        //update the ui elements
+        if (_newdata != null)
         {
             if(textToViewModel != null)
             {
-                textToViewModel.text = newdata.temperature + " °C";
+                textToViewModel.text = _newdata.temperature + " °C";
             }
-            textToViewUi.text = newdata.temperature + " °C";
+            textToViewUi.text = _newdata.temperature + " °C";
 
 
         }
@@ -45,26 +55,28 @@ public class WebSocketManager : MonoBehaviour
 
     public void startConnection()
     {
-        ws.Connect();
+        _ws.Connect();
 
     }
 
     public void Close()
     {
 
-        ws.Close();
+        _ws.Close();
     }
 
     public void ToggleConnectio()
     {
 
-        if(ws.IsAlive) {
+        if(_isConnected) {
             textButton.text = "Get Live Temperature";
-            ws.Close();
+            _ws.Close();
+            _isConnected = false;
         }
         else { 
-            ws.Connect();
+            _ws.Connect();
             textButton.text = "Stop Connection";
+            _isConnected = true;
         }
     }
 }

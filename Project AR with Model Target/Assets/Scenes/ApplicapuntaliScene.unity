@@ -194,7 +194,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 529275223}
   - component: {fileID: 529275222}
   m_Layer: 0
-  m_Name: PlaneTextWanigLeft
+  m_Name: PlaneTextWanig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 705761909}
   - component: {fileID: 705761908}
   m_Layer: 0
-  m_Name: TextEmergLeft
+  m_Name: TextEmerg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Task
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1364,7 +1364,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 40
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 905988512}
   - component: {fileID: 905988511}
   - component: {fileID: 905988510}
-  - component: {fileID: 905988509}
+  - component: {fileID: 905988513}
   m_Layer: 0
   m_Name: PlaneOnOff
   m_TagString: Untagged
@@ -1481,20 +1481,6 @@ Transform:
   - {fileID: 1228521298}
   m_Father: {fileID: 776009538}
   m_LocalEulerAnglesHint: {x: 86.003, y: 213.978, z: 38.891}
---- !u!114 &905988509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905988507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bf61bc980bedb044bab94cda296345f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textStateModel: {fileID: 1796842180}
-  internalId: 2
 --- !u!64 &905988510
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1567,6 +1553,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905988507}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &905988513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905988507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf61bc980bedb044bab94cda296345f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textStateModel: {fileID: 1796842180}
+  internalId: 2
 --- !u!1 &913156763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +1862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &917692824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2084,7 +2084,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1989351026}
   - {fileID: 1731954567}
   - {fileID: 2066705169}
   - {fileID: 103382755}
@@ -2137,7 +2136,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075754690}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -0.031}
+  m_LocalPosition: {x: 0, y: 0, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2145,7 +2144,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.063, y: -0}
+  m_AnchoredPosition: {x: 0.06, y: 0.09}
   m_SizeDelta: {x: 9.642, y: 9.536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1075754692
@@ -2584,7 +2583,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -55.86212, z: 0, w: -69.26904}
+  m_margin: {x: 38.074615, y: 18.165405, z: 41.38391, w: -20.317139}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2612,10 +2611,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 917692826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.3687, y: 14.2116}
-  m_SizeDelta: {x: 967.4069, y: 1186.8994}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 515.9903, y: -788.2616}
+  m_SizeDelta: {x: 929.4712, y: 1483.9534}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1319963187
 GameObject:
@@ -2979,7 +2978,7 @@ GameObject:
   - component: {fileID: 1457753040}
   - component: {fileID: 1457753039}
   m_Layer: 0
-  m_Name: PlaneEmergencyLeft
+  m_Name: PlaneEmergency
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3994,7 +3993,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 50
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4293,16 +4292,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989351021}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.609375, y: 0.609375, z: 0.609375}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 926795822}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 959.99994, y: 2077.5383}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989351027
@@ -4542,7 +4541,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4990,5 +4989,6 @@ SceneRoots:
   - {fileID: 1132490420}
   - {fileID: 2145594941}
   - {fileID: 1417052149}
+  - {fileID: 1989351026}
   - {fileID: 776009538}
   - {fileID: 1470739819}
